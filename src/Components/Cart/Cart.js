@@ -3,8 +3,10 @@ import './Cart.css'
 const Cart = ({cart}) => {
     let total = 0;
     let shipping = 0;
+    let quantity = 0;
     for(const product of cart){
-        total = product.price + total;
+        quantity = quantity + product.quantity;
+        total = product.price*product.quantity + total;
         shipping = shipping + product.shipping;
     }
     const tax = (total*0.1).toFixed(2);
