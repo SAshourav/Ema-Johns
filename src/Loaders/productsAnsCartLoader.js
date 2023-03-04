@@ -16,5 +16,5 @@ export const productsAndCartLoader = async () => {
             previousCart.push(addedProduct);
         }
     }
-    return {products,previousCart};
+    return {products : products ,previousCart: previousCart};
 }
